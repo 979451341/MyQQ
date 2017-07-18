@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="#f0f0f0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/toolbar_backColor"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:id="@+id/contacts_toolbar_linearl">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_launcher"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/contacts_number_tv"
+            android:text="消息"
+            android:textSize="20dp"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/contacts_name_tv"
+            android:text="消息"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:maxEms="5"
+            android:ellipsize="end"
+            android:maxWidth="70dp"
+            android:maxLines="1"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_launcher"
+            android:layout_margin="10dp"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_launcher"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+ <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/huise"
+     android:layout_above="@+id/contacts_bottom_tool_linearl">
+        
+        <Button
+        android:id="@+id/contacts_btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:text="发送"
+        android:background="@drawable/send_btn" />
+        <EditText
+            android:id="@+id/contacts_et_sendmessage"
+            android:layout_width="fill_parent"
+              android:layout_toLeftOf="@id/contacts_btn_send"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/textbg"
+            android:singleLine="true"
+            android:textSize="18sp" 
+              android:layout_alignParentLeft="true"/>
+         
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/contacts_bottom_tool_linearl">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_launcher"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_launcher"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_launcher"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_launcher"/>
+    </LinearLayout>
+   <ListView
+    android:id="@+id/contacts_listview"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"    
+	android:divider="@null"
+    android:dividerHeight="5dp"
+    android:cacheColorHint="#0000"
+    android:layout_above="@+id/rl_bottom"
+       android:layout_below="@+id/contacts_toolbar_linearl"
+    />
+ 
+</RelativeLayout>
+

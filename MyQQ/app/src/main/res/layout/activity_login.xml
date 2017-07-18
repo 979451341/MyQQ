@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddd">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:gravity="center_horizontal">
+        <android.com.myqq.customview.CircleView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            app:imgSrc="@drawable/sample" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="#fafafa"
+            android:textCursorDrawable="@drawable/color_cursor"/>
+
+        <ImageButton
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@id/et_name"
+            android:layout_alignRight="@id/et_name"
+            android:layout_alignTop="@id/et_name"
+            android:src="@drawable/drawable_expand" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="#fafafa"
+            android:textCursorDrawable="@drawable/color_cursor"/>
+
+        <ImageButton
+            android:id="@+id/login_imgbtn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@id/login_password"
+            android:layout_alignRight="@id/login_password"
+            android:layout_alignTop="@id/login_password"
+            android:src="@drawable/search_clear_pressed" />
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:text="登录"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="25dp"
+        android:background="@drawable/corners_bg"
+        android:textColor="#fffefe"
+        android:id="@+id/login_btn_login"/>
+
+</LinearLayout>

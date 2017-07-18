@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/friend_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white" />
+
+    <FrameLayout
+        android:id="@+id/friend_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height">
+
+        <android.com.myqq.customview.KenBurnsView
+            android:id="@+id/friend_header_picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/picture0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:id="@+id/friend_linear">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:text="动态"
+                    android:layout_marginLeft="0dp"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:text="好友动态"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_drawer"
+                    android:layout_gravity="right"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="80dp">
+                <android.com.myqq.customview.CircleView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:imgSrc="@drawable/sample"
+                    android:layout_margin="15dp"
+                    android:id="@+id/main_user_logo"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="left"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_launcher"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="right">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="今日访客 0"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总浏览量 15423"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="0dp">
+                <TextView
+
+                    android:text="相册"
+                    style="@style/friend_text_bottom_style"/>
+                <TextView
+                    style="@style/friend_text_bottom_style"
+                    android:text="说说"/>
+                <TextView
+                    style="@style/friend_text_bottom_style"
+                    android:text="个性化"/>
+                <TextView
+                    style="@style/friend_text_bottom_style"
+                    android:text="小游戏"/>
+                <TextView
+                    style="@style/friend_text_bottom_style"
+                    android:text="消息"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

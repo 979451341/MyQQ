@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+    android:background="@color/white">
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue"
+                    android:layout_width="match_parent">
+
+                    <android.com.myqq.customview.CircleView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:imgSrc="@drawable/sample"
+                        android:layout_margin="8dp"
+                        android:id="@+id/main_user_logo"/>
+
+                    <RadioGroup
+                        android:id="@+id/rg"
+                        android:layout_margin="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <RadioButton
+                            android:id="@+id/rb0"
+                            android:layout_height="wrap_content"
+                            android:layout_width="60dp"
+                            android:button="@null"
+                            android:text="消息"
+                            android:checked="true"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:paddingTop="6dip"
+                            android:paddingBottom="6dip"
+                            android:textColor="@color/title_text_sel"
+                            android:background="@drawable/rb_bg_01"/>
+
+                        <RadioButton
+                            android:id="@+id/rb1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="60dp"
+                            android:text="电话"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:paddingTop="6dip"
+                            android:paddingBottom="6dip"
+                            android:textColor="@color/title_text_sel"
+                            android:background="@drawable/rb_bg_02"/>
+                    </RadioGroup>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:id="@+id/main_btn_more"
+                    android:textSize="35dp"
+                    android:gravity="center"
+                    android:textColor="#fffefe"
+                    android:background="#00fffdfd" />
+
+            </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:orientation="horizontal"
+            android:background="@drawable/corners_searchview">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/search_icon"
+                android:layout_marginLeft="5dp"/>
+
+            <EditText
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="20dp"
+                android:hint="搜索"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:background="@null"
+                android:gravity="center"
+                android:id="@+id/main_search_et"
+                android:cursorVisible="false" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d2d0d0"/>
+
+    <include
+        layout="@layout/fragment_netstate"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/main_content"></FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d2d0d0">
+        </LinearLayout>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/main_tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:tabSelectedTextColor="@color/blue"
+            app:tabIndicatorColor="#fffefe"
+            android:background="#fffefe"/>
+</LinearLayout>
+
+
